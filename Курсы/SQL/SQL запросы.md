@@ -6,6 +6,12 @@
  insert into table_name(a,b,c)
  values(a_value, b_value, c_value); - вставить значения a_value, b_value,                                        c_value в колонки a,b,c таблицы                                            table_name
  
+ insert into table_name
+ values
+ (a_value, b_value, c_value),        - вставить в таблицу несколько строк
+ (a_value, b_value, c_value),          за раз
+ (a_value, b_value, c_value);
+ 
  
  update table_name set
  a_value = 'new a_value'
@@ -20,9 +26,9 @@
  where condition                    - вернуть строку, где условие                                                condition выполняется(вместо a, b, c                                       можно поставить * если нужны все                                           столбцы в выборке )
  
  create table table_name2(
-	 a bigint not null,
+	 a int not null,
 	 b varchar not null,
-	 fk bigint not null,
+	 fk int not null,
 	 constraint fk_name foreign key (fk) references table_name1(id)
 );
 
@@ -38,6 +44,18 @@
 	 - в отличии от inner join(просто join) добавляет в выборку и те строки(из левой или правой таблицы), у которых нет совпадения по id
  
  full outer join - содержит и left и right outer join
+ 
+sum(), avg(), min(), max() - агрегатные функции
+
+если используешь: where condition, то в condition нельзя использовать  агрегатные функции
+
+для использования фильтрации с использованием агрегатных функций нужно использовать: having condition
+но для having данные должны быть сгруппированы
+
+для группировки данных используется:
+group by kolumn - сортирует по уникальным значениям колонки kolumn 
+
+alter table table_name add kolumn kolumn_name parameters - добавляет новый столбец c именем kolumn_name в таблицу
  
 bigint - целое число
 
