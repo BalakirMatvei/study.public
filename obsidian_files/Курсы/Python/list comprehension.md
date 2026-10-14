@@ -15,7 +15,7 @@ lower_names = [name.lower() for name in names]
 Можно также использовать else:
 ```python
 names = ['Артем', 'Антон', 'Александр', 'Борис', 'Виктор', 'Геннадий']
-replace_name = [name if name != 'Виктор' else 'Вадим' for name in names]
+replace_name = [name if name !=jjnnjjndpjvpevpejrl[lleqc994888499002984uhgbfkxnkvjbvf nckjiijc nsz] 'Виктор' else 'Вадим' for name in names]
 #['Артем', 'Антон', 'Александр', 'Борис', 'Вадим', 'Геннадий']
 ```
 Код буквально означает:
